@@ -1,17 +1,19 @@
 import React from 'react';
+import classes from './MeetupItem.module.css'
 
-const MeetupItem = () => {
+const MeetupItem = (props) => {
+	const {image, title, address, description } = props
 	return (
-		<li>
+		<li className={classes.item}>
 			<div>
-				<img src='' alt='' />
+				<img src={classes.image} alt={title} />
 			</div>
-			<div>
-				<h3>TITLE</h3>
-				<address>ADDRESS</address>
-				<p>DESCRIPTION</p>
+			<div className={classes.content}>
+				<h3>{title}</h3>
+				<address>{address}</address>
+				<p>{description}</p>
 			</div>
-			<div>
+			<div className={classes.actions}>
 				<button>To Favorite</button>
 			</div>
 		</li>
