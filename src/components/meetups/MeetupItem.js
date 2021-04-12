@@ -5,8 +5,8 @@ const MeetupItem = (props) => {
 	const {image, title, address, description } = props
 	return (
 		<li className={classes.item}>
-			<div>
-				<img src={classes.image} alt={title} />
+			<div className={classes.image}>
+				<img src={image} alt={title} />
 			</div>
 			<div className={classes.content}>
 				<h3>{title}</h3>
