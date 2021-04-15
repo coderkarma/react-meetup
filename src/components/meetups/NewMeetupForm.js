@@ -23,7 +23,11 @@ const NewMeetupForm = () => {
 
                 <div className={classes.control}>
                     <label htmlFor='address'>Meetup Description</label>
-                    <textarea name='' id='' cols='30' rows='10'></textarea>
+                    <textarea id='description' required rows='5'></textarea>
+                </div>
+
+                <div className={classes.actions}>
+                    <button>Add Meetup</button>
                 </div>
             </form>
         </Card>
