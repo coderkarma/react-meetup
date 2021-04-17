@@ -1,7 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import NewMeetupForm from '../components/meetups/NewMeetupForm';
 
 const NewMeetup = () => {
+    const history = useHistory();
+
     const addMeetupHandler = (meetupData) => {
         fetch(
             'https://react-getting-started-d5bf5-default-rtdb.firebaseio.com/meetups.json',
@@ -12,7 +15,9 @@ const NewMeetup = () => {
                     'Content-Type': 'application/json',
                 },
             }
-        );
+        ).then(() => {
+            history.replace('/');
+        });
     };
     return (
         <section>
