@@ -21,11 +21,12 @@ const AllMeetupsPage = () => {
                         id: key,
                         ...data[key],
                     };
+                    console.log(data);
                     meetups.push(newMeetup);
                 }
 
                 setIsLoading(false);
-                setLoadedMeetups(data);
+                setLoadedMeetups(meetups);
             });
     }, []);
 
